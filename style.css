@@ -38,6 +38,7 @@ i {
 h1,
 h3 {
   color: var(--linear-primary);
+  text-transform: uppercase;
 }
 
 h1 {
@@ -48,9 +49,37 @@ h3 {
   font-size: 48px;
 }
 
+/* Common Styles */
 .fixed-width {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.fixed-width-xl {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.btn-primary,
+.btn-secondery {
+  padding: 20px 40px;
+  border-radius: 48px;
+  background: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-secondery {
+  background: #4ec5f7;
+}
+
+.highlight {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Header */
@@ -96,7 +125,34 @@ nav .fa-youtube {
 }
 
 .banner {
+  background: url("images/spark.png");
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: left;
+}
+
+.banner .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.banner-img-container img {
+  width: 700px;
+}
+
+.feature {
+  margin: 24px 0;
+}
+
+.feature li {
+  color: #534c64;
+  font-size: 20px;
+  font-weight: 500;
+  list-style: inside;
+}
+.btn-container {
+  display: flex;
+  gap: 24px;
 }
