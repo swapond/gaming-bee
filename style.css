@@ -62,7 +62,7 @@ h3 {
 
 .btn-primary,
 .btn-secondery {
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-radius: 48px;
   background: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
   border: none;
@@ -80,6 +80,10 @@ h3 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+section {
+  margin-bottom: 120px;
 }
 
 /* Header */
@@ -135,11 +139,18 @@ nav .fa-youtube {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
+  padding: 0 20px;
 }
-
-.banner-img-container img {
-  width: 700px;
+.banner-content {
+  width: 60%;
+}
+.banner-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40%;
+}
+.banner-img-container .big-img {
+  grid-column: span 2;
 }
 
 .feature {
@@ -155,4 +166,106 @@ nav .fa-youtube {
 .btn-container {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Intro */
+section.intro {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
+}
+
+.intro .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 20px;
+  align-items: center;
+}
+
+.intro .section-content {
+  width: 40%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.intro .section-img {
+  width: 60%;
+}
+.intro .btn-primary {
+  width: fit-content;
+  margin: 4px 0;
+}
+
+.tag-line {
+  color: #534c64;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Header */
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Banner */
+  .banner {
+    background: none;
+    padding-bottom: 40px;
+  }
+  .banner-content {
+    width: 100%;
+    background: url(images/spark.png);
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    background-position: left;
+    padding: 120px 40px;
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+  .banner-content .highlight {
+    font-size: 17vw;
+  }
+  .banner .container {
+    flex-direction: column-reverse;
+  }
+  .banner-img-container {
+    width: 100%;
+    padding: 40px;
+    justify-items: center;
+    box-sizing: border-box;
+  }
+  .btn-container {
+    justify-content: center;
+  }
+
+  /* Intro */
+  .intro .container {
+    flex-direction: column;
+  }
+
+  .intro .section-img {
+    width: 100%;
+  }
+  .intro .section-content {
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    align-items: center;
+  }
 }
